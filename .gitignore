@@ -1,0 +1,6 @@
+.idea/
+*/.env.yaml
+**.json
+
+# mac
+.DS_Store
