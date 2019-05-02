@@ -1,0 +1,9 @@
+steps:
+  - name: "gcr.io/cloud-builders/gcloud"
+    entrypoint: "sh"
+    args:
+      - "-c"
+      - |
+        version=$(echo $BRANCH_NAME | sed 's/[\/\.]/-/g')
+        gcloud app deploy --project=$PROJECT_ID --version=$version --no-promote ./appengine/app.yaml
+
